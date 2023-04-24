@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.box-main {
+  background-color: lightgray;
+  display: inline-block;
+  height: auto;
+  margin-top: 50px;
+  padding: 50px;
+  width: 70%;
+}
+
+h1 {
+  color: navy;
+  margin-bottom: 50px;
+}
+
+img {
+  border: 10px solid black;
+  border-radius: 25px;
+  height: 200px;
+  margin: 0 auto 50px;
+  transition: transform 0.3s;
+  width: 200px;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+p {
+  color: gray;
+  font-size: 18px;
+  text-align: left;
+}
+
+.links {
+  margin-top: 50px;
+  text-align: center;
+}
+
+a {
+  color: navy;
+  font-size: 18px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #6ab8b4, #e0a1b5);
+  padding-bottom: 25px;
+}
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fa-github {
+  color: black;
+}
+
+.fa-globe {
+  color: black;
+}
+
+.fa-linkedin-in {
+  color: #0077B5;
+}
+
+.fa-youtube {
+  color: red;
+}

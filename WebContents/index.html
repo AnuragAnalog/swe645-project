@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <header>
+      <h1>Survey Form</h1>
+    </header>
+
+    <link rel="stylesheet" type="text/css" href="styles-form.css">
+
+    <script>
+      function checkForm() {
+        var firstName = document.forms["surveyForm"]["firstName"].value;
+        var lastName = document.forms["surveyForm"]["lastName"].value;
+        var streetAddress1 = document.forms["surveyForm"]["streetAddress1"].value;
+        var streetAddress2 = document.forms["surveyForm"]["streetAddress2"].value;
+        var city = document.forms["surveyForm"]["city"].value;
+        var state = document.forms["surveyForm"]["state"].value;
+        var zip = document.forms["surveyForm"]["zip"].value;
+        var telephoneNumber = document.forms["surveyForm"]["telephoneNumber"].value;
+        var email = document.forms["surveyForm"]["email"].value;
+        var dateOfSurvey = document.forms["surveyForm"]["dateOfSurvey"].value;
+        if (firstName == "" || lastName == "" || streetAddress1 == "" || streetAddress2 == "" || city == "" || state == "" || zip == "" || telephoneNumber == "" || email == "" || dateOfSurvey == "") {
+          alert("All fields are required.");
+          return false;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <form name="surveyForm" onsubmit="return checkForm()">
+      <div>
+        <label for="firstName">
+          First Name
+        </label>
+        <input type="text" name="firstName" id="firstName" required>
+      </div>
+      <div>
+        <label for="lastName">
+          Last Name
+        </label>
+        <input type="text" name="lastName" id="lastName" required>
+      </div>
+      <div>
+        <label for="streetAddress1">
+          Street Address(1)
+        </label>
+        <input type="text" name="streetAddress1" id="streetAddress1" required>
+      </div>
+      <div>
+        <label for="streetAddress2">
+          Street Address(2)
+        </label>
+        <input type="text" name="streetAddress2" id="streetAddress2" required>
+      </div>
+      <div>
+        <label for="city">
+          City
+        </label>
+        <input type="text" name="city" id="city" required>
+      </div>
+      <div>
+        <label for="state">
+          State
+        </label>
+        <input type="text" name="state" id="state" required>
+      </div>
+      <div>
+        <label for="zip">
+          Zip
+        </label>
+        <input type="text" name="zip" id="zip" required>
+      </div>
+      <div>
+        <label for="telephoneNumber">
+          Mobile Number
+        </label>
+        <input type="text" name="telephoneNumber" id="telephoneNumber" required>
+      </div>
+      <div>
+        <label for="email">
+          Email
+        </label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div>
+        <label for="dateOfSurvey">
+          Date of Survey
+        </label>
+        <input type="date" name="dateOfSurvey" id="dateOfSurvey" required>
+      </div>
+
+      <h3>Why do you like the campus the most?</h3>
+      <input type="checkbox" id="location" name="location" value="location">
+      <label for="location">
+        Location
+      </label><br>
+      <input type="checkbox" id="students" name="students" value="students">
+      <label for="students">
+        Students
+      </label><br>
+      <input type="checkbox" id="atmosphere" name="atmosphere" value="atmosphere">
+      <label for="atmosphere">
+        Atmosphere
+      </label><br>
+      <input type="checkbox" id="campus" name="campus" value="campus">
+      <label for="campus">
+        Campus
+      </label><br>
+      <input type="checkbox" id="sports" name="sports" value="sports">
+      <label for="sports">
+        Sports
+      </label><br>
+      <input type="checkbox" id="dormrooms" name="dormrooms" value="dorm rooms">
+      <label for="dormrooms">
+        Dorm Rooms
+      </label><br>
+
+      <h3>Are there anything which made you interested in the university?</h3>
+      <input type="radio" id="internet" name="interest" value="internet" required>
+      <label for="internet">
+        Internet
+      </label><br>
+      <input type="radio" id="television" name="interest" value="television" required>
+      <label for="television">
+        Television
+      </label><br>
+      <input type="radio" id="friends" name="interest" value="friends" required>
+      <label for="friends">
+        Friends
+      </label><br>
+      <input type="radio" id="other" name="interest" value="other" required>
+      <label for="other">
+        Other
+      </label><br><br>
+
+      <h3>Would you like to recommend this school to your fellow peers?</h3>
+      <select name="recommendation" required>
+        <option value="Very Likely">
+          Very Likely
+        </option>
+        <option value="Likely">
+          Likely
+        </option>
+        <option value="Unlikely">
+          Unlikely
+        </option>
+        <option value="Very Unlikely">
+          Very Unlikely
+        </option>
+      </select>
+
+      <h3>Are you lucky? Enter the Raffle, to know more.</h3>
+      <input type="text" name="raffle" pattern="^[1-9][0-9]?$|^100$(,[1-9][0-9]?$|^100$)*$" required>
+      <p>You tokens are ten ',' numbers separated from 1 through 100.</p>
+
+      <h3>Any more comments?</h3>
+      <textarea name="comments" rows="5" cols="30"></textarea>
+
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+      <div>
+        <input type="reset" value="Cancel">
+      </div>
+    </form>      
+  </body>
+</html>
